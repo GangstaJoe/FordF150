@@ -66,7 +66,8 @@ def move():
     global last_move
     #ay yo vide check
     # all placemnet for items
-    
+    board_max_y = data['board']['width']
+    board_max_x = data['board']['height']
     head_x = data['you']['body'][0]['x']
     print('Your head is: ', head_x)
     head_y = data['you']['body'][0]['y']
@@ -94,22 +95,19 @@ def move():
         direction = 'up'    
     if head_y == 0:
         direction = 'right'    
-    if head_x == 10 :
-        direction = 'down'
-            
-    if head_y == 10 :
+    if head_x ==  board_max_x-1 :
+        direction = 'down'       
+    if head_y == board_max_y-1 :
         direction = 'left'
     if head_x == 0 and head_y != 0 and last_move != 'down':
-        direction = 'up'
-    
-        
+        direction = 'up'  
         #apple eater
-    if HP <= 75:
+    if size <= 3:
         
-        if apple_left is True:
+        if apple_left is True and last_move != 'right':
             direction = 'left' 
             print('u_left')
-        if apple_right is True:
+        if apple_right is True and last_move != 'left':
             direction = 'right'
             print('u_right')
         if apple_up is True and last_move != 'down' :
@@ -119,45 +117,52 @@ def move():
             direction = 'down'
             print('u_down')
 
-    if size >= 23:
+    if size >= 4:
         if head_y == 0 and head_x == 1  :
             direction = 'down'
-        if head_y == 9 and head_x == 1:
+        if head_y == board_max_y-2 and head_x == 1:
             direction = 'right'
-        if head_y == 9 and head_x == 2:
+        if head_y == board_max_y-2 and head_x == 2:
             direction = 'up'
         if head_y == 0 and head_x == 2 :
                 direction = 'right'
         if head_y == 0 and head_x == 3 :
             direction = 'down'
-        if head_y == 9 and head_x == 3:
+        if head_y == board_max_y-2 and head_x == 3:
             direction = 'right'    
-        if head_y == 9 and head_x == 4 :
+        if head_y == board_max_y-2 and head_x == 4 :
             direction = 'up'
         if head_y == 0 and head_x == 4:
             direction = 'right'
         if head_y == 0 and head_x == 5 :
             direction = 'down'
-        if head_y == 9 and head_x == 5:
+        if head_y == board_max_y-2 and head_x == 5:
             direction = 'right'    
-        if head_y == 9 and head_x == 6 :
+        if head_y == board_max_y-2 and head_x == 6 :
             direction = 'up'
         if head_y == 0 and head_x == 6:
             direction = 'right'   
         if  head_y == 0 and head_x == 7 :
             direction = 'down'
-        if head_y == 9 and head_x == 7:
+        if head_y == board_max_y-2 and head_x == 7:
             direction = 'right'
-        if head_y == 9 and head_x == 8 :
+        if head_y == board_max_y-2 and head_x == 8 :
             direction = 'up'
         if head_y == 0 and head_x == 8:
             direction = 'right'
         if head_y == 0 and head_x == 9 :
             direction = 'down'
-        if head_y == 9 and head_x == 9:
+        if head_y == board_max_y-2 and head_x == 9:
             direction = 'right'
     
-    
+        if board_max_x >= 12 and head_y == board_max_y-2 and head_x ==10:
+            direction = 'up'
+        if board_max_x >= 12 and head_y == 0 and head_x == 10:
+            direcrion = 'right'
+        if board_max_x >= 12 and head_y == 0 and head_x == 11:
+            direction = 'down'
+        if board_max_x >=12 and head_y == board_max_y-2 and head_x == 11:
+            direction = 'right'
            
         
     last_move = direction
