@@ -93,7 +93,7 @@ def move():
      
        # if last_move == '':
         
-        direction = 'up'
+        #direction = 'up'
         #if last_move == 'up':
         #    direction = 'right'
        # if last_move == 'right':
