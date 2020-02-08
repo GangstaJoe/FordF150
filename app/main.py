@@ -68,11 +68,11 @@ def move():
     #ay yo vide check
     # all placemnet for items
     
-    bodySet = set()
-    for x in data['you']['body']:
-        bodySet.add(x)
+ #   bodySet = set()
+ #   for x in data['you']['body']:
+ #       bodySet.add(x)
         
-    print(bodySet)
+ #   print(bodySet)
         
         
    
