@@ -91,6 +91,10 @@ def move():
         direction != 'up'
     if last_move == 'up':
         direction != 'down'
+    if last_move == 'right':
+        direction != 'left'
+    if last_move == 'left':
+        direction != 'right'
     #cant hit walls
     if last_move == '':
         direction = 'up'    
