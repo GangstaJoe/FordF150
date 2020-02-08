@@ -67,7 +67,7 @@ def move():
     global last_move
     #ay yo vide check
     # all placemnet for items
-    last_move = direction
+   
     
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
@@ -88,6 +88,7 @@ def move():
     apple_down = apple_y > head_y
     apple_up = apple_y < head_y
     directions = ['up', 'down', 'left', 'right'] 
+    last_move = direction
      #looping for 3 leangth    
     #if size == 3 and HP <= 25:
      
