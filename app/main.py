@@ -107,7 +107,7 @@ def move():
     if head_x == 0 and head_y != 0 and last_move != 'down':
         direction = 'up'  
         #apple eater
-    if size <= 10:
+    if size <= 23:
         
         if apple_left is True and last_move != 'right':
             direction = 'left' 
@@ -122,7 +122,7 @@ def move():
             direction = 'down'
             print('u_down')
 
-    if size >= 11:
+    if size >= 23:
         if head_y == 0 and head_x == 1  :
             direction = 'down'
         if head_y == board_max_y-2 and head_x == 1:
