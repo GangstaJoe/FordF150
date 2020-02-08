@@ -103,7 +103,7 @@ def move():
        # if last_move == 'left':
        #     direction = 'up'
   #cant kill itself does not work for now!!!!
-    if las_move == '':
+    if last_move == '':
         direction = 'up'
     if last_move == 'down':
         direction != 'up'
