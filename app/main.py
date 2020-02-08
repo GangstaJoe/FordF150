@@ -135,7 +135,7 @@ def move():
             direction = 'down'
             print('u_down')
 
-    if size HP <= 25:
+    if HP <= 25:
         if head_y == 0 and head_x == 1  :
             direction = 'down'
         if head_y == board_max_y-2 and head_x == 1:
