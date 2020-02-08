@@ -88,7 +88,6 @@ def move():
     apple_down = apple_y > head_y
     apple_up = apple_y < head_y
     directions = ['up', 'down', 'left', 'right'] 
-    last_move = direction
      #looping for 3 leangth    
     #if size == 3 and HP <= 25:
      
@@ -104,6 +103,8 @@ def move():
        # if last_move == 'left':
        #     direction = 'up'
   #cant kill itself does not work for now!!!!
+    if las_move == '':
+        direction = 'up'
     if last_move == 'down':
         direction != 'up'
     if last_move == 'up':
@@ -112,6 +113,7 @@ def move():
         direction != 'left'
     if last_move == 'left':
         direction != 'right'
+    last_move = direction
     #cant hit walls    
     if head_y == 0:
         direction = 'right'    
