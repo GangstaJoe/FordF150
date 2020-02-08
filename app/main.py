@@ -154,11 +154,10 @@ def move():
             direction = 'down'
         if head_y == board_max_y-2 and head_x == 9:
             direction = 'right'
-    
         if board_max_x >= 12 and head_y == board_max_y-2 and head_x ==10:
             direction = 'up'
         if board_max_x >= 12 and head_y == 0 and head_x == 10:
-            direcrion = 'right'
+            direction = 'right'
         if board_max_x >= 12 and head_y == 0 and head_x == 11:
             direction = 'down'
         if board_max_x >=12 and head_y == board_max_y-2 and head_x == 11:
