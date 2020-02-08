@@ -105,6 +105,7 @@ def move():
   #cant kill itself does not work for now!!!!
     if last_move == '':
         direction = 'up'
+    last_move = direction
     if last_move == 'down':
         direction != 'up'
     if last_move == 'up':
@@ -113,7 +114,7 @@ def move():
         direction != 'left'
     if last_move == 'left':
         direction != 'right'
-    last_move = direction
+
     #cant hit walls    
     if head_y == 0:
         direction = 'right'    
