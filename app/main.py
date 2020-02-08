@@ -102,16 +102,7 @@ def move():
        #     direction = 'left'
        # if last_move == 'left':
        #     direction = 'up'
-    if last_move == '':
-        direction = 'up'
-    if last_move == 'down':
-        direction != 'up'
-    if last_move == 'up':
-        direction != 'down'
-    if last_move == 'right':
-        direction != 'left'
-    if last_move == 'left':
-        direction != 'right'
+
 
     #cant hit walls    
     if head_y == 0:
@@ -185,7 +176,7 @@ def move():
             direction = 'right'
            
         
-
+    
 
     
  
@@ -193,6 +184,7 @@ def move():
     
    
     print('direction is: ', direction)
+    last_move = direction
     
     return move_response(direction)
 
