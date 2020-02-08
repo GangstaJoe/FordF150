@@ -88,17 +88,19 @@ def move():
     apple_up = apple_y < head_y
     directions = ['up', 'down', 'left', 'right'] 
      #looping for 3 leangth    
-    if size == 3 and HP <= 25:
-        if last_move == '':
-            direction = 'up'
-        if last_move == 'up':
-            direction = 'right'
-        if last_move == 'right':
-            direction = 'down'
-        if last_move == 'down':
-            direction = 'left'
-        if last_move == 'left':
-            direction = 'up'
+    #if size == 3 and HP <= 25:
+     
+       # if last_move == '':
+        
+       # direction = 'up'
+       # if last_move == 'up':
+       #     direction = 'right'
+       # if last_move == 'right':
+       #     direction = 'down'
+       # if last_move == 'down':
+       #     direction = 'left'
+       # if last_move == 'left':
+       #     direction = 'up'
   #cant kill itself does not work for now!!!!
     if last_move == 'down':
         direction != 'up'
@@ -118,7 +120,7 @@ def move():
     if head_y == 0 :
         direction = 'up'  
         #apple eater
-    if size <= 24 and HP >= 25:
+    if HP >= 25:
         
         if apple_left is True and last_move != 'right':
             direction = 'left' 
@@ -133,51 +135,51 @@ def move():
             direction = 'down'
             print('u_down')
 
-    #if size <= 23:
-    #    if head_y == 0 and head_x == 1  :
-    #        direction = 'down'
-    #    if head_y == board_max_y-2 and head_x == 1:
-    #        direction = 'right'
-    #    if head_y == board_max_y-2 and head_x == 2:
-    #        direction = 'up'
-     #   if head_y == 0 and head_x == 2 :
-     #           direction = 'right'
-     #  if head_y == 0 and head_x == 3 :
-     #       direction = 'down'
-     #   if head_y == board_max_y-2 and head_x == 3:
-     #       direction = 'right'    
-     #   if head_y == board_max_y-2 and head_x == 4 :
-     #       direction = 'up'
-     #   if head_y == 0 and head_x == 4:
-      #      direction = 'right'
-      #  if head_y == 0 and head_x == 5 :
-      #      direction = 'down'
-      #  if head_y == board_max_y-2 and head_x == 5:
-      #      direction = 'right'    
-      #  if head_y == board_max_y-2 and head_x == 6 :
-      #      direction = 'up'
-      #  if head_y == 0 and head_x == 6:
-      #      direction = 'right'   
-      #  if  head_y == 0 and head_x == 7 :
-      #      direction = 'down'
-      #  if head_y == board_max_y-2 and head_x == 7:
-      #      direction = 'right'
-      #  if head_y == board_max_y-2 and head_x == 8 :
-      #      direction = 'u'
-      #  if head_y == 0 and head_x == 8:
-      #      direction = 'right'
-      #  if head_y == 0 and head_x == 9 :
-      #      direction = 'down'
-      #  if head_y == board_max_y-2 and head_x == 9:
-      #      direction = 'right'
-       # if board_max_x >= 12 and head_y == board_max_y-2 and head_x ==10:
-      #      direction = 'up'
-       # if board_max_x >= 12 and head_y == 0 and head_x == 10:
-       #     direction = 'right'
-       # if board_max_x >= 12 and head_y == 0 and head_x == 11:
-       #     direction = 'down'
-       # if board_max_x >=12 and head_y == board_max_y-2 and head_x == 11:
-       #     direction = 'right'
+    if size HP <= 25:
+        if head_y == 0 and head_x == 1  :
+            direction = 'down'
+        if head_y == board_max_y-2 and head_x == 1:
+            direction = 'right'
+        if head_y == board_max_y-2 and head_x == 2:
+            direction = 'up'
+        if head_y == 0 and head_x == 2 :
+                direction = 'right'
+        if head_y == 0 and head_x == 3 :
+            direction = 'down'
+        if head_y == board_max_y-2 and head_x == 3:
+            direction = 'right'    
+        if head_y == board_max_y-2 and head_x == 4 :
+            direction = 'up'
+        if head_y == 0 and head_x == 4:
+            direction = 'right'
+        if head_y == 0 and head_x == 5 :
+            direction = 'down'
+        if head_y == board_max_y-2 and head_x == 5:
+            direction = 'right'    
+        if head_y == board_max_y-2 and head_x == 6 :
+            direction = 'up'
+        if head_y == 0 and head_x == 6:
+            direction = 'right'   
+        if  head_y == 0 and head_x == 7 :
+            direction = 'down'
+        if head_y == board_max_y-2 and head_x == 7:
+            direction = 'right'
+        if head_y == board_max_y-2 and head_x == 8 :
+            direction = 'up'
+        if head_y == 0 and head_x == 8:
+            direction = 'right'
+        if head_y == 0 and head_x == 9 :
+            direction = 'down'
+        if head_y == board_max_y-2 and head_x == 9:
+            direction = 'right'
+        if board_max_x >= 12 and head_y == board_max_y-2 and head_x ==10:
+            direction = 'up'
+        if board_max_x >= 12 and head_y == 0 and head_x == 10:
+            direction = 'right'
+        if board_max_x >= 12 and head_y == 0 and head_x == 11:
+            direction = 'down'
+        if board_max_x >=12 and head_y == board_max_y-2 and head_x == 11:
+            direction = 'right'
            
         
     last_move = direction
