@@ -67,6 +67,14 @@ def move():
     global last_move
     #ay yo vide check
     # all placemnet for items
+    
+    bodySet = set()
+    for x in data['you']['body']:
+        bodySet.add(x)
+        
+    print(bodySet)
+        
+        
    
     
     board_max_y = data['board']['width']
