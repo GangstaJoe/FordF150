@@ -67,6 +67,7 @@ def move():
     global last_move
     #ay yo vide check
     # all placemnet for items
+    last_move = direction
     
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
@@ -182,7 +183,7 @@ def move():
             direction = 'right'
            
         
-    last_move = direction
+
 
     
  
