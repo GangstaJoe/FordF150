@@ -1,3 +1,4 @@
+import platform
 import json
 import os
 import random
@@ -213,10 +214,23 @@ def end():
 application = bottle.default_app()
 
 if __name__ == '__main__':
-    bottle.run(
-        application,
-        host=os.getenv('IP', '0.0.0.0'),
-        port=os.getenv('PORT', '80'),
-        debug=os.getenv('DEBUG', True)
-    )
+    s = platform.system()
+    if s == 'Darwin':
+        bottle.run(
+            application,
+            host=os.getenv('IP', '0.0.0.0'),
+            port=os.getenv('PORT', '8080'),
+            debug=os.getenv('DEBUG', True),
+            #server='paste'
+            server='tornado'
+        )
+    else:
+        bottle.run(
+            application,
+            host=os.getenv('IP', '0.0.0.0'),
+            port=os.getenv('PORT', '80'),
+            debug=os.getenv('DEBUG', True)
+        )
+
+
 #vide confermed
