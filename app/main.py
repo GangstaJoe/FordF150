@@ -87,10 +87,10 @@ def move():
     apple_up = apple_y < head_y
     directions = ['up', 'down', 'left', 'right'] 
   #cant kill itself does not work for now!!!!
- #   if last_move == 'down':
-  #      direction != 'up'
-  #  if last_move == 'up':
-  #      direction != 'down'
+    if last_move == 'down':
+        direction != 'up'
+    if last_move == 'up':
+        direction != 'down'
     #cant hit walls
     if last_move == '':
         direction = 'up'    
