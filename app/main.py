@@ -87,6 +87,18 @@ def move():
     apple_down = apple_y > head_y
     apple_up = apple_y < head_y
     directions = ['up', 'down', 'left', 'right'] 
+     #looping for 3 leangth    
+    if size == 3 and HP <= 25:
+        if last_move == '':
+            direction = 'up'
+        if last_move == 'up':
+            direction = 'right'
+        if last_move == 'right':
+            direction = 'down'
+        if last_move == 'down':
+            direction = 'left'
+        if last_move == 'left':
+            direction = 'up'
   #cant kill itself does not work for now!!!!
     if last_move == 'down':
         direction != 'up'
@@ -171,18 +183,7 @@ def move():
     last_move = direction
 
     
-    #looping for 3 leangth    
-    if size == 3 and HP <= 25:
-        if last_move == '':
-            direction = 'up'
-        if last_move == 'up':
-            direction = 'right'
-        if last_move == 'right':
-            direction = 'down'
-        if last_move == 'down':
-            direction = 'left'
-        if last_move == 'left':
-            direction = 'up'
+ 
         
     
    
