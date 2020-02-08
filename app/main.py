@@ -67,6 +67,7 @@ def move():
     global last_move
     #ay yo vide check
     # all placemnet for items
+    
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
     head_x = data['you']['body'][0]['x']
@@ -107,7 +108,7 @@ def move():
     if head_x == 0 and head_y != 0 and last_move != 'down':
         direction = 'up'  
         #apple eater
-    if size <= 23:
+    if size <= 23 and HP >= 25:
         
         if apple_left is True and last_move != 'right':
             direction = 'left' 
@@ -170,27 +171,20 @@ def move():
            
         
     last_move = direction
-    #eating apple 
-    #if HP <= 75 :
-     #       direction = apple_y
-      #      if head_y != apple_y:
-       #         direction = apple_y
-        #        if head_x != apple_x:
-         #           direction = apple_x
-                        
+
     
     #looping for 3 leangth    
-   # if size == 3:
-   #     if last_move == '':
-   #         direction = 'up'
-   #     if last_move == 'up':
-   #         direction = 'right'
-   #     if last_move == 'right':
-   #         direction = 'down'
-   #     if last_move == 'down':
-   #         direction = 'left'
-   #     if last_move == 'left':
-   #         direction = 'up'
+    if size == 3 and HP <= 25:
+        if last_move == '':
+            direction = 'up'
+        if last_move == 'up':
+            direction = 'right'
+        if last_move == 'right':
+            direction = 'down'
+        if last_move == 'down':
+            direction = 'left'
+        if last_move == 'left':
+            direction = 'up'
         
     
    
