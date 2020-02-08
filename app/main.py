@@ -96,16 +96,14 @@ def move():
         direction != 'left'
     if last_move == 'left':
         direction != 'right'
-    #cant hit walls
-    if last_move == '':
-        direction = 'up'    
+    #cant hit walls    
     if head_y == 0:
         direction = 'right'    
     if head_x ==  board_max_x-1 :
         direction = 'down'       
     if head_y == board_max_y-1 :
         direction = 'left'
-    if head_x == 0 and head_y != 0 and last_move != 'down':
+    if head_y == 0 :
         direction = 'up'  
         #apple eater
     if size <= 24 and HP >= 25:
