@@ -140,6 +140,16 @@ def move():
 
     
     if HP >= 35:
+            if size == 3:
+                if last_move == 'up':
+                    direction = 'right'
+                if last_move == 'right':
+                    direction = 'down'
+                if last_move == 'down':
+                    direction = 'left'
+                if last_move == 'left':
+                    direction = 'up'
+        if size != 3:
             if head_x != tail_x:
                 direction = 'right'
             else:
