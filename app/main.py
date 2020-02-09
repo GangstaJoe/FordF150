@@ -97,6 +97,7 @@ def move():
     apple_up = apple_y < head_y
     tail_x = data['you']['body'][size-1]['x']
     directions = ['up', 'down', 'left', 'right'] 
+    direction = 'none'
      #looping for 3 leangth    
     #if size == 3 and HP <= 25:
      
