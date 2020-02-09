@@ -160,6 +160,8 @@ def move():
                     direction = 'left'
                 if last_move == 'right':
                     direction = 'down'
+                if last_move == 'left':
+                    direction = 'up'
                   
 
     
