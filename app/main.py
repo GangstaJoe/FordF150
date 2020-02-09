@@ -140,7 +140,7 @@ def move():
 
     
     if HP >= 35:
-            if head_x != tail:
+            if head_x != tail_x:
                 direction = 'right'
             else:
                 direction = 'down'
