@@ -101,8 +101,8 @@ def move():
      #looping for 3 leangth    
     #if size == 3 and HP <= 25:
      
-        if last_move == '':
-            direction = 'up'
+    if last_move == '':
+        direction = 'up'
         #if last_move == 'up':
         #    direction = 'right'
        # if last_move == 'right':
