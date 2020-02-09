@@ -150,12 +150,11 @@ def move():
             if last_move == 'left':
                 direction = 'up'
         if size != 3:
-            if last_move == 'up':
+            direction = 'right'
+            if head_x != tail:
                 direction = 'right'
-                if head_x != tail:
-                    direction = 'right'
-                else:
-                    direction = 'down'
+            else:
+                direction = 'down'
           
     
 
