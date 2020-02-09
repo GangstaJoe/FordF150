@@ -164,7 +164,7 @@ def move():
         
     
    
-    print('direction is: ', direction)
+    #print('direction is: ', direction)
     last_move = direction
     
     return move_response(direction)
