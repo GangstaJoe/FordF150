@@ -123,7 +123,7 @@ def move():
     if head_y == 0 :
         direction = 'up'  
         #apple eater
-    if HP <= 34:
+    if HP <= 74:
         
         if apple_left is True and last_move != 'right':
             direction = 'left' 
@@ -139,7 +139,7 @@ def move():
             print('u_down')
 
     
-    if HP >= 35:
+    if HP >= 75:
             if size == 3:
                 if last_move == 'up':
                     direction = 'right'
