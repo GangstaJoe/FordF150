@@ -96,6 +96,7 @@ def move():
     apple_down = apple_y > head_y
     apple_up = apple_y < head_y
     tail_x = data['you']['body'][size-1]['x']
+    tail_y = data['you']['body'][size-1]['y']
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none'
      #looping for 3 leangth    
@@ -150,6 +151,8 @@ def move():
                 if last_move == 'left':
                     direction = 'up'
             if size != 3:
+                if tail_y == head_y:
+                    direction = 'down'
                 if last_move == 'up':
                     direction = 'right'
                     if head_x != tail_x + 1:
