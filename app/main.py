@@ -128,11 +128,11 @@ def move():
         
         if apple_up is True and last_move == 'down' and head_x == board_max_x-1 and head_x != 0:
             direction = 'left'
-        if apple_up is True and last_move == 'down' and head_x != board_max_x-1 and head_x = 0:
+        if apple_up is True and last_move == 'down' and head_x != board_max_x-1 and head_x == 0:
             direction = 'right'
         if apple_down is True and last_move == 'up' and head_x != board_max_x -1 and head_x != 0:
             direction = 'left'
-        if apple_down is True and last_move == 'up' and head_x != board_max_x -1 and head_x = 0:
+        if apple_down is True and last_move == 'up' and head_x != board_max_x -1 and head_x == 0:
             direction = 'right'
         if apple_left is True and last_move != 'right':
             direction = 'left' 
