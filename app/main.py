@@ -163,7 +163,7 @@ def move():
                     direction = 'down'
                 if last_move == 'up':
                     direction = 'right'
-                    if head_x != tail_x + 1:
+                    if head_x != tail_x + 2:
                         direction = 'right'
                     else:
                         direction = 'down'
