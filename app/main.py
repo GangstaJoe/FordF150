@@ -159,7 +159,9 @@ def move():
                 if last_move == 'left':
                     direction = 'up'
             if size >= 4:
-                if tail_y == head_y:
+                if tail_y == head_y :
+                    direction = 'down'
+                if head_x >= tail_x and tail_y+1 = head_x:
                     direction = 'down'
                 if last_move == 'up':
                     direction = 'right'
