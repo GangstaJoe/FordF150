@@ -76,7 +76,7 @@ def move():
         
         
    
-    
+ 
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
     head_x = data['you']['body'][0]['x']
@@ -91,6 +91,8 @@ def move():
     print('Health is: ',HP)
     size = len(data['you']['body'])
     print('size is: ',size) 
+    loop_size = size -3
+    print ('loop size is, ',loop_size)
     apple_right = apple_x > head_x
     apple_left = apple_x < head_x
     apple_down = apple_y > head_y
@@ -115,7 +117,7 @@ def move():
 
 
     #cant hit walls    
-    if head_y == 0:
+    if head_y == 0 :
         direction = 'right'    
     if head_x ==  board_max_x-1 :
         direction = 'down'       
@@ -124,7 +126,7 @@ def move():
     if head_y == 0 :
         direction = 'up'  
         #apple eater
-    if HP <= 74:
+    if HP <= 24:
         
         if apple_up is True and last_move == 'down' and head_x == board_max_x-1 and head_x != 0:
             direction = 'left'
@@ -148,7 +150,7 @@ def move():
             print('u_down')
 
     
-    if HP >= 75:
+    if HP >= 25:
             if size == 3:
                 if last_move == 'up':
                     direction = 'right'
@@ -159,21 +161,10 @@ def move():
                 if last_move == 'left':
                     direction = 'up'
             if size >= 4:
-                if tail_y == head_y :
+                for i in range(loop_size) :
                     direction = 'down'
-                if head_x >= tail_x and tail_y+1 == head_x:
-                    direction = 'down'
-                if last_move == 'up':
-                    direction = 'right'
-                    if head_x != tail_x + 2:
-                        direction = 'right'
-                    else:
-                        direction = 'down'
-                if last_move == 'down':
-                    direction = 'left'
-                if last_move == 'right':
-                    direction = 'down'
-                if last_move == 'left':
+                direction = 'right'
+                for i in range(loop_size):
                     direction = 'up'
                   
 
