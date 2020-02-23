@@ -97,7 +97,7 @@ def move():
     tail_y = data['you']['body'][size-1]['y']
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
-    if last_move == '':
+
     #cant hit walls    
     if head_y == 0 :
         direction = 'right'    
