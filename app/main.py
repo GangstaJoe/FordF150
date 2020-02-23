@@ -73,10 +73,6 @@ def move():
  #       bodySet.add(x)
         
  #   print(bodySet)
-        
-        
-   
- 
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
     head_x = data['you']['body'][0]['x']
@@ -100,22 +96,8 @@ def move():
     tail_x = data['you']['body'][size-1]['x']
     tail_y = data['you']['body'][size-1]['y']
     directions = ['up', 'down', 'left', 'right'] 
-    direction = 'none'
-     #looping for 3 leangth    
-    #if size == 3 and HP <= 25:
-     
+    direction = 'none' 
     if last_move == '':
-        direction = 'up'
-        #if last_move == 'up':
-        #    direction = 'right'
-       # if last_move == 'right':
-       #     direction = 'down'
-       # if last_move == 'down':
-       #     direction = 'left'
-       # if last_move == 'left':
-       #     direction = 'up'
-
-
     #cant hit walls    
     if head_y == 0 :
         direction = 'right'    
@@ -125,9 +107,8 @@ def move():
         direction = 'left'
     if head_y == 0 :
         direction = 'up'  
-        #apple eater
-    if HP <= 24:
-        
+    #apple eater
+    if HP <= 24:     
         if apple_up is True and last_move == 'down' and head_x == board_max_x-1 and head_x != 0:
             direction = 'left'
         if apple_up is True and last_move == 'down' and head_x != board_max_x-1 and head_x == 0:
@@ -147,9 +128,8 @@ def move():
             print('u_up')
         if apple_down is True and last_move != 'up':
             direction = 'down'
-            print('u_down')
-
-    
+            print('u_down')    
+    #loop
     if HP >= 25:
             if size == 3:
                 if last_move == 'up':
@@ -165,24 +145,11 @@ def move():
                     direction = 'down'
                 direction = 'right'
                 for i in range(loop_size):
-                    direction = 'up'
-                  
-
-    
-
-    
- 
-        
-    
-   
+                    direction = 'up'  
     #print('direction is: ', direction)
     last_move = direction
     
     return move_response(direction)
-
-
-
-
 @bottle.post('/end')
 def end():
     data = bottle.request.json
