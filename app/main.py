@@ -1,3 +1,4 @@
+import helpers as h
 import platform
 import json
 import os
@@ -97,8 +98,14 @@ def move():
     tail_y = data['you']['body'][size-1]['y']
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
+    
+    body = []
+    for b in data['you']['body'][0:-1]:
+        c = h.Coord(b)
+        body.append(c)
 
-    #cant hit walls    
+ 
+        #cant hit walls    
     if head_y == 0 :
         direction = 'right'    
     if head_x ==  board_max_x-1 :
@@ -108,46 +115,15 @@ def move():
     if head_y == 0 :
         direction = 'up'  
     #apple eater
-    if HP <= 24:     
-        if apple_up is True and last_move == 'down' and head_x == board_max_x-1 and head_x != 0:
-            direction = 'left'
-        if apple_up is True and last_move == 'down' and head_x != board_max_x-1 and head_x == 0:
-            direction = 'right'
-        if apple_down is True and last_move == 'up' and head_x != board_max_x -1 and head_x != 0:
-            direction = 'left'
-        if apple_down is True and last_move == 'up' and head_x != board_max_x -1 and head_x == 0:
-            direction = 'right'
-        if apple_left is True and last_move != 'right':
-            direction = 'left' 
-            print('u_left')
-        if apple_right is True and last_move != 'left':
-            direction = 'right'
-            print('u_right')
-        if apple_up is True and last_move != 'down' :
-            direction ='up'
-            print('u_up')
-        if apple_down is True and last_move != 'up':
-            direction = 'down'
-            print('u_down')    
-    #loop
-    if HP >= 25:
-            if size == 3:
-                if last_move == 'up':
-                    direction = 'right'
-                if last_move == 'right':
-                    direction = 'down'
-                if last_move == 'down':
-                    direction = 'left'
-                if last_move == 'left':
-                    direction = 'up'
-            if size >= 4:
-                for i in range(loop_size) :
-                    direction = 'down'
-                direction = 'right'
-                for i in range(loop_size):
-                    direction = 'up'  
+    if  size >= 3:
+        last_move = direction
+        target = h.Coord({'x':apple_x, 'y':apple_y})
+        start = h.Coord({'x':head_x, 'y':head_y})
+        direction = h.floodForTarget(start, [target], body)
+
+
     #print('direction is: ', direction)
-    last_move = direction
+
     
     return move_response(direction)
 @bottle.post('/end')
