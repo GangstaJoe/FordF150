@@ -120,12 +120,6 @@ def move():
         target = h.Coord({'x':apple_x, 'y':apple_y})
         start = h.Coord({'x':head_x, 'y':head_y})
         direction = h.floodForTarget(start, [target], body)
-    #loop 2
-    if size > 3 and HP > 80:
-        ast_move = direction
-        target = h.Coord({'x':tail_x, 'y':tail_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], body)
 
 
     #print('direction is: ', direction)
