@@ -98,7 +98,10 @@ def move():
     tail_y = data['you']['body'][size-1]['y']
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
-    
+    other_body = []
+    for a in data ['snakes']['body']:
+        d = h.Coord(a)
+        body.append(d)
     body = []
     for b in data['you']['body'][0:-1]:
         c = h.Coord(b)
