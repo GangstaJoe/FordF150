@@ -102,7 +102,7 @@ def move():
     for a in data ['snakes']['body']:
         d = h.Coord(a)
         body.append(d)
-    for z in data snakes:
+    for z in snakes:
         x=h.Coord(z)
         body.append(x)
     body = []
