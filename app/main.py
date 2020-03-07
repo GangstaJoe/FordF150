@@ -101,10 +101,10 @@ def move():
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
     snake = []
-    for s in data['snakes']
-    for b in s['body']:
-        c = h.Coord(b)
-        body.append(c)
+    for s in data['snakes']:
+        for b in s['body']:
+            c = h.Coord(b)
+            body.append(c)
     body = []
     for b in data['you']['body'][0:-1]:
         c = h.Coord(b)
