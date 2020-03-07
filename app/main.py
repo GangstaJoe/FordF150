@@ -129,7 +129,7 @@ def move():
         direction = h.floodForTarget(start, [target], body)
 
 
-    #print('direction is: ', direction)
+    print('direction is: ', direction)
 
     
     return move_response(direction)
