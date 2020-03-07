@@ -100,6 +100,11 @@ def move():
     print ('Tail y is :', tail_y)
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
+    snake = []
+    for s in data['snakes']
+    for b in s['body']:
+        c = h.Coord(b)
+        body.append(c)
     body = []
     for b in data['you']['body'][0:-1]:
         c = h.Coord(b)
@@ -115,17 +120,11 @@ def move():
         direction = 'left'
     if head_y == 0 :
         direction = 'up'  
-    #loop2
-    if HP > 80 and size > 3:
-        last_move = direction
-        target = h.Coord({'x':tail_x, 'y':tail_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], body)
     #apple eater
     if  size == 3 or HP < 80:
         target = h.Coord({'x':apple_x, 'y':apple_y})
         start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], body)
+        direction = h.floodForTarget(start, [target], snakes)
 
 
     print('direction is: ', direction)
