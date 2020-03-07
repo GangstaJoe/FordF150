@@ -113,8 +113,14 @@ def move():
         direction = 'left'
     if head_y == 0 :
         direction = 'up'  
+    #loop2
+    if HP > 80 and size > 3:
+        last_move = direction
+        target = h.Coord({'x':tail_x, 'y':tail_y})
+        start = h.Coord({'x':head_x, 'y':head_y})
+        direction = h.floodForTarget(start, [target], body)
     #apple eater
-    if  size >= 3:
+    if  size == 3 or HP < 80:
         last_move = direction
         target = h.Coord({'x':apple_x, 'y':apple_y})
         start = h.Coord({'x':head_x, 'y':head_y})
