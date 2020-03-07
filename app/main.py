@@ -100,17 +100,15 @@ def move():
     print ('Tail y is :', tail_y)
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
-    snake = []
-    for b in data['board']['snakes']['body']:
+    snakes = []
+    for s in data['board']['snakes']:
+        for b in s['body']:
             c = h.Coord(b)
-            body.append(c)
-    body = []
-    for b in data['you']['body'][0:-1]:
-        c = h.Coord(b)
-        body.append(c)
+            snakes.append(c)
+
 
  
-        #cant hit walls    
+    #cant hit walls    
     if head_y == 0 :
         direction = 'right'    
     if head_x ==  board_max_x-1 :
