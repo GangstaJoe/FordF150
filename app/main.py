@@ -95,7 +95,9 @@ def move():
     apple_down = apple_y > head_y
     apple_up = apple_y < head_y
     tail_x = data['you']['body'][-1]['x']
+    print ('Tail x is :', tail_x)
     tail_y = data['you']['body'][-1]['y']
+    print ('Tail y is :', tail_y)
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
     body = []
