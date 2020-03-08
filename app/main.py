@@ -105,6 +105,7 @@ def move():
     snake3 = len['board']['snakes'][2]['body']
     snake4 = len['board']['snakes'][3]['body']
     snake1_x = data['board']['snakes'][0]['body'][0]['x']
+    print ('Snake 1 x is :',snake_1)
     snake2_x= data['board']['snakes'][1]['body'][0]['x']
     snake3_x = data['board']['snakes'][2]['body'][0]['x']
     snake4_x = data['board']['snakes'][3]['body'][0]['x']
