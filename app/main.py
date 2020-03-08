@@ -100,10 +100,10 @@ def move():
     print ('Tail y is :', tail_y)
     directions = ['up', 'down', 'left', 'right'] 
     direction = 'none' 
-    snake1 = len['board']['snakes'][0]['body']
-    snake2= len['board']['snakes'][1]['body']
-    snake3 = len['board']['snakes'][2]['body']
-    snake4 = len['board']['snakes'][3]['body']
+    #snake1 = len['board']['snakes'][0]['body']
+    #snake2= len['board']['snakes'][1]['body']
+    #snake3 = len['board']['snakes'][2]['body']
+    #snake4 = len['board']['snakes'][3]['body']
     #snake1_x = data['board']['snakes'][0]['body'][0]['x']
     #print ('Snake 1 x is :',snake_1)
     #snake2_x= data['board']['snakes'][1]['body'][0]['x']
