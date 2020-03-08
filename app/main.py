@@ -148,6 +148,10 @@ def move():
         target = h.Coord({'x':snake3_x, 'y':snake3_y})
         start = h.Coord({'x':head_x, 'y':head_y})
         direction = h.floodForTarget(start, [target], snakes)
+    if size > snake4:
+        target = h.Coord({'x':snake4_x, 'y':snake4_y})
+        start = h.Coord({'x':head_x, 'y':head_y})
+        direction = h.floodForTarget(start, [target], snakes)
     #apple eater
     if  size >= 3:
         target = h.Coord({'x':apple_x, 'y':apple_y})
