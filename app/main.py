@@ -104,15 +104,15 @@ def move():
     snake2= len['board']['snakes'][1]['body']
     snake3 = len['board']['snakes'][2]['body']
     snake4 = len['board']['snakes'][3]['body']
-    snake1_x = data['board']['snakes'][0]['body'][0]['x']
-    print ('Snake 1 x is :',snake_1)
-    snake2_x= data['board']['snakes'][1]['body'][0]['x']
-    snake3_x = data['board']['snakes'][2]['body'][0]['x']
-    snake4_x = data['board']['snakes'][3]['body'][0]['x']
-    snake1_y = data['board']['snakes'][0]['body'][0]['y']
-    snake2_y= data['board']['snakes'][1]['body'][0]['y']
-    snake3_y = data['board']['snakes'][2]['body'][0]['y']
-    snake4_y = data['board']['snakes'][3]['body'][0]['y']
+    #snake1_x = data['board']['snakes'][0]['body'][0]['x']
+    #print ('Snake 1 x is :',snake_1)
+    #snake2_x= data['board']['snakes'][1]['body'][0]['x']
+    #snake3_x = data['board']['snakes'][2]['body'][0]['x']
+    #snake4_x = data['board']['snakes'][3]['body'][0]['x']
+    #snake1_y = data['board']['snakes'][0]['body'][0]['y']
+    #snake2_y= data['board']['snakes'][1]['body'][0]['y']
+    #snake3_y = data['board']['snakes'][2]['body'][0]['y']
+    #snake4_y = data['board']['snakes'][3]['body'][0]['y']
     
     othersize = []
     for s in data['board']['snakes']:
@@ -135,23 +135,7 @@ def move():
         direction = 'left'
     if head_y == 0 :
         direction = 'up'  
-    #lets fight
-    if size > snake1:
-        target = h.Coord({'x':snake1_x, 'y':snake1_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], snakes)
-    if size > snake2:
-        target = h.Coord({'x':snake2_x, 'y':snake2_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], snakes)
-    if size > snake3:
-        target = h.Coord({'x':snake3_x, 'y':snake3_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], snakes)
-    if size > snake4:
-        target = h.Coord({'x':snake4_x, 'y':snake4_y})
-        start = h.Coord({'x':head_x, 'y':head_y})
-        direction = h.floodForTarget(start, [target], snakes)
+   
     #apple eater
     if  size >= 3:
         target = h.Coord({'x':apple_x, 'y':apple_y})
