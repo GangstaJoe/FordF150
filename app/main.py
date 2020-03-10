@@ -118,13 +118,20 @@ def move():
     for s in data['board']['snakes']:
         for b in s['body']:
             len(b)
+    print('othersize:',othersize)
     snakes = []
     for s in data['board']['snakes']:
         for b in s['body']:
             c = h.Coord(b)
             snakes.append(c)
 
-
+    food = []
+    for f in data['board']['food']:
+        c = h.Coord(f)
+        snakes.append(c)
+    print('food is :', food)
+    #caculate food
+    
  
     #cant hit walls    
     if head_y == 0 :
