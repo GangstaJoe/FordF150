@@ -125,11 +125,7 @@ def move():
             c = h.Coord(b)
             snakes.append(c)
 
-    food = []
-    for f in data['board']['food']:
-        c = h.Coord(f)
-        snakes.append(c)
-    print('food is :', food)
+
     #caculate food
     
  
