@@ -146,7 +146,7 @@ def move():
         direction = h.floodForTarget(start, [target], snakes)
     #loop
     if HP > 80:
-        target = h.Coord({'x':tail_x -1, 'y':tail_y -1 })
+        target = h.Coord({'x':tail_x-1, 'y':tail_y-1 })
         start = h.Coord({'x':head_x, 'y':head_y})
         direction = h.floodForTarget(start, [target], snakes)
 
