@@ -140,17 +140,21 @@ def move():
         direction = 'up'  
 
     #apple eater
-    if  size == 3 or HP > 80 :
+    if size == 3 
+        target = h.Coord({'x':apple_x, 'y':apple_y})
+        start = h.Coord({'x':head_x, 'y':head_y})
+        direction = h.floodForTarget(start, [target], snakes)
+    print('direction is: ', direction)
+    if  HP < 50 :
         target = h.Coord({'x':apple_x, 'y':apple_y})
         start = h.Coord({'x':head_x, 'y':head_y})
         direction = h.floodForTarget(start, [target], snakes)
     #loop
-    if HP < 80:
+    if HP > 50:
         target = h.Coord({'x':tail_x-1, 'y':tail_y-1 })
         start = h.Coord({'x':head_x, 'y':head_y})
         direction = h.floodForTarget(start, [target], snakes)
 
-    print('direction is: ', direction)
 
     
     return move_response(direction)
