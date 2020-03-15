@@ -67,13 +67,7 @@ def move():
     
     global last_move
     #ay yo vide check
-    # all placemnet for items
-    
- #   bodySet = set()
- #   for x in data['you']['body']:
- #       bodySet.add(x)
-        
- #   print(bodySet)
+
     board_max_y = data['board']['width']
     board_max_x = data['board']['height']
     head_x = data['you']['body'][0]['x']
@@ -157,10 +151,10 @@ def move():
     def end():
         data = bottle.request.json
 
-    """
-    TODO: If your snake AI was stateful,
-        clean up any stateful objects here.
-    """
+    #"""
+    #TODO: If your snake AI was stateful,
+    #    clean up any stateful objects here.
+    #"""
     print(json.dumps(data))
 
     return end_response()
