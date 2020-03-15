@@ -113,10 +113,7 @@ def move():
     #snake2_y= data['board']['snakes'][1]['body'][0]['y']
     #snake3_y = data['board']['snakes'][2]['body'][0]['y']
     #snake4_y = data['board']['snakes'][3]['body'][0]['y']
-    apples = []
-    for s in data['board']['food']:
-        c = h.Coord(s)
-        snakes.append(c)
+
     othersize = []
     for s in data['board']['snakes']:
         for b in s['body']:
