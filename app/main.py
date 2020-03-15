@@ -153,9 +153,9 @@ def move():
 
     
     return move_response(direction)
-@bottle.post('/end')
-def end():
-    data = bottle.request.json
+    @bottle.post('/end')
+    def end():
+        data = bottle.request.json
 
     """
     TODO: If your snake AI was stateful,
